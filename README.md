@@ -13,7 +13,7 @@ echo '333 BENDER' >> /etc/iproute2/rt_tables (only once)<br />
 iptables -t nat -D POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to-source xx.xx.xx.xx<br />
 iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE<br />
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE<br />
-ip rule add from 10.8.0.0/24 table BENDER<br />
+ip rule add from 0.0.0.0/24 table BENDER<br />
 
 Dependencies:<br />
 pip3 install netaddr<br />
