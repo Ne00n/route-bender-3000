@@ -1,4 +1,5 @@
-Who needs BGP when you got Route Bender 3000
+Who needs BGP when you got Route Bender 3000<br />
+JUST BEND YOUR WAY DoWN YOUr DESTINY
 
 Why:<br />
 Getting lower latency while gaming online
@@ -6,7 +7,7 @@ Getting lower latency while gaming online
 Setup:<br />
 [VpnCloud](https://github.com/dswd/vpncloud) as transport network<br />
 [openVPN](https://github.com/Nyr/openvpn-install) as entry point (since VpnCloud does not support Windows)<br />
-VpnCloud + openVPN + route bender 3000 runs on RPi4, Windows client connects to it
+VpnCloud + openVPN + route bender 3000 running on RPi4, Windows client connects to it
 
 Enable:<br />
 echo '333 BENDER' >> /etc/iproute2/rt_tables (only once)<br />
