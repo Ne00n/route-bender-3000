@@ -11,6 +11,7 @@ VpnCloud + openVPN + route bender 3000 running on RPi4, Windows client connects 
 
 **Prepare**<br />
 echo '333 BENDER' >> /etc/iproute2/rt_tables<br />
+rename nodes.example.json to nodes.json
 
 **Dependencies**<br />
 pip3 install netaddr<br />
