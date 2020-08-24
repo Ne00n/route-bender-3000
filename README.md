@@ -20,4 +20,4 @@ pip3 install netaddr<br />
 apt-get install -y oping tcpdump
 
 Usage:<br />
-python3 bender.py
+python3 bender.py tun0

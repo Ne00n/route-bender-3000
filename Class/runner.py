@@ -1,8 +1,6 @@
 #Route Bender Runner
 import subprocess, re, sys
 
-gateways = ['10.0.1.1','10.0.1.2','10.0.1.3','10.0.1.4','10.0.1.5','10.0.1.6','10.0.1.7','10.0.1.8','10.0.1.9','10.0.1.11']
-
 class Runner:
     def ping(self,ip):
         try:
@@ -21,7 +19,7 @@ class Runner:
             i += 1
         return lowest
 
-    def run(self,subnet,ip,ms):
+    def run(self,subnet,ip,ms,gateways):
         print("Route Bender Runner")
         results = []
         for target in gateways:

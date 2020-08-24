@@ -9,7 +9,7 @@ class IP:
         print("### Loading IP ###")
         if not path.exists("routeviews.pfx2as"):
             print("Downloading routeviews.pfx2as")
-            url = "http://data.caida.org/datasets/routing/routeviews-prefix2as/2020/08/routeviews-rv2-20200818-1000.pfx2as.gz"
+            url = "http://data.caida.org/datasets/routing/routeviews-prefix2as/2020/08/routeviews-rv2-20200822-1200.pfx2as.gz"
             urllib.request.urlretrieve (url, "routeviews.pfx2as.gz")
             with gzip.open('routeviews.pfx2as.gz', 'rb') as f_in:
                 with open('routeviews.pfx2as', 'wb') as f_out:
