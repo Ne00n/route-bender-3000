@@ -74,7 +74,7 @@ def check(interface):
     print("Lets do some bending")
     runner = Runner()
     for element in latency:
-        p = Process(target=runner.run, args=(element[0],element[1],element[2],gateways))
+        p = Process(target=runner.run, args=(element[0],element[1],element[2],gateways,interface))
         p.start()
         print("Launched",element[0])
 

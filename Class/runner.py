@@ -19,14 +19,14 @@ class Runner:
             i += 1
         return lowest
 
-    def run(self,subnet,ip,ms,gateways):
+    def run(self,subnet,ip,ms,gateways,interface):
         print("Route Bender Runner")
         results = []
         for target in gateways:
-            subprocess.run(['ip','route','add',ip+'/32','via',target,'dev','vpncloud0','table','BENDER'])
+            subprocess.run(['ip','route','add',ip+'/32','via',target,'dev',interface,'table','BENDER'])
             rtt = self.ping(ip)
             results.append([target,rtt])
-            subprocess.run(['ip','route','del',ip+'/32','via',target,'dev','vpncloud0','table','BENDER'])
+            subprocess.run(['ip','route','del',ip+'/32','via',target,'dev',interface,'table','BENDER'])
             print("Bending traffic to",target,"got",rtt,"ms")
         lowest = self.findLowest(results)
         diff = int(ms) - float(lowest[1])
@@ -36,4 +36,4 @@ class Runner:
             print("Direct route is better, keeping it for",ip,"Lowest we got",float(lowest[1]),"ms vs",int(ms),"ms direct")
         elif float(lowest[1]) < int(ms):
             print("Routed",ip,"via",lowest[0],"improved latency by",diff,"ms")
-            subprocess.run(['ip','route','add',subnet,'via',lowest[0],'dev','vpncloud0','table','BENDER'])
+            subprocess.run(['ip','route','add',subnet,'via',lowest[0],'dev',interface,'table','BENDER'])
