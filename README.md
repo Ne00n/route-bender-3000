@@ -1,6 +1,8 @@
 Who needs BGP when you got Route Bender 3000<br />
 JUST BEND YOUR WAY DoWN YOUr DESTINY
 
+New shit: https://github.com/Ne00n/route-bender-4000
+
 **Why**<br />
 Getting lower latency while gaming online
 
